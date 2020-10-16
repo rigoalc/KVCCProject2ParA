@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<title>Project 2 Part A</title>
+</head>
+<body>
+<!--
+       Part A – (50 Points) - Create a web page that will use JavaScript. Build a function that will take two parameters.
+
+Inside the function, perform 5 separate actions:
+Add, subtract, multiply, divide and perform modulus on the two numbers.
+
+Call the function four separate times and use the following values as arguments to be passed to the function:
+
+-5, 5
+10, 5
+5, -10
+-10, -5
+Display the results to the user with a short description of each result.
+-->
+
+<script>
+
+        function   doMath(value1, value2)
+        {
+          value1 = parseFloat(value1);
+          value2 = parseFloat(value2);
+        
+          var sum = value1 + value2;
+          var difference = value1 - value2;
+          var product = value1 * value2;
+          var quotient = value1 / value2;
+          var remainder = value1 % value2;
+        
+          var msg = "Results of using " + value1 + " and " + value2 + " are:<br>";
+          msg += value1 + " + " + value2 + " = " + sum + "<br>";
+          msg += value1 + " - " + value2 + " = " + difference + "<br>";
+          msg += value1 + " * " + value2 + " = " + product + "<br>";
+          msg += value1 + " / " + value2 + " = " + quotient + "<br>";
+          msg += value1 + " % " + value2 + " = " + remainder + "<br>";
+        
+          document.getElementById('outputPara').innerHTML += msg;
+        }
+      </script>
+</head>
+<body>
+<p id="outputPara"></p>
+
+<script>
+  doMath(-5, 5)
+  doMath(10, 5);
+  doMath(5,-10);
+  doMath(-10,5);
+</script>
+
+</body>
+</html>
